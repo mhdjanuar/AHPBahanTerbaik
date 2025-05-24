@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2025 at 07:32 PM
+-- Generation Time: May 24, 2025 at 06:34 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ahp_calon_pelamar`
+-- Database: `ahp_bahan_terbaik`
 --
 
 -- --------------------------------------------------------
@@ -30,26 +30,24 @@ SET time_zone = "+00:00";
 CREATE TABLE `candidates` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `gender` varchar(15) NOT NULL,
-  `last_education` varchar(10) NOT NULL,
-  `phone_number` varchar(15) NOT NULL,
-  `address` text NOT NULL,
-  `leadership_score` int(11) NOT NULL,
-  `knowledge_score` int(11) NOT NULL,
-  `technical_skill_score` int(11) NOT NULL,
-  `advanced_skill_score` int(11) NOT NULL
+  `description` text DEFAULT NULL,
+  `appearance_score` int(11) NOT NULL,
+  `comfort_score` int(11) NOT NULL,
+  `durability_score` int(11) NOT NULL,
+  `maintenance_score` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `candidates`
 --
 
-INSERT INTO `candidates` (`id`, `name`, `gender`, `last_education`, `phone_number`, `address`, `leadership_score`, `knowledge_score`, `technical_skill_score`, `advanced_skill_score`) VALUES
-(1, 'Ahmad Santoso', 'Male', 'S1', '081234567890', 'Jl. Kenanga No. 1, Jakarta', 85, 90, 88, 80),
-(2, 'Rina Widya', 'Female', 'S1', '082345678901', 'Jl. Melati No. 2, Bandung', 78, 82, 85, 88),
-(3, 'Dedi Prasetyo', 'Male', 'D3', '083456789012', 'Jl. Mawar No. 3, Surabaya', 80, 76, 82, 75),
-(4, 'Sari Putri', 'Female', 'SMA', '084567890123', 'Jl. Anggrek No. 4, Yogyakarta', 70, 72, 74, 73),
-(5, 'Budi Hartono', 'Male', 'S2', '085678901234', 'Jl. Flamboyan No. 5, Medan', 90, 88, 91, 87);
+INSERT INTO `candidates` (`id`, `name`, `description`, `appearance_score`, `comfort_score`, `durability_score`, `maintenance_score`) VALUES
+(1, 'Belini', 'Kain campuran polyester dan katun, kuat, tidak mudah kusut, cocok untuk seragam lapangan dan formal.', 7, 6, 8, 9),
+(2, 'Karmani', 'Kain poliester-viskosa yang tebal dan elegan, cocok untuk jas atau blazer dengan tampilan eksklusif.', 9, 7, 9, 6),
+(3, 'Potopino', 'Kain formal berbahan poliester-viskosa, doff, tidak mudah kusut, ideal untuk pakaian kantor.', 8, 7, 9, 7),
+(4, 'Tropical', 'Kain ringan, sejuk, dan mudah dicuci, cocok untuk pakaian kerja harian di iklim tropis.', 6, 8, 7, 8),
+(5, 'Semi Wool test', 'Kain premium campuran wol sintetis, tampilan sangat elegan namun butuh perawatan khusus. test', 7, 1, 2, 3),
+(6, 'Test', 'test desc', 1, 2, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -68,10 +66,10 @@ CREATE TABLE `criteria` (
 --
 
 INSERT INTO `criteria` (`code`, `name`, `priority`) VALUES
-('K1', 'Nilai Kepemimpinan', 'Sangat Penting ke-1'),
-('K2', 'Pengetahuan', 'Penting ke-2'),
-('K3', 'Kemampuan Teknis', 'Cukup Penting ke-3'),
-('K4', 'Kemampuan Lanjutan', 'Biasa ke-4');
+('K1', 'Nilai Penampilan', 'Sangat Penting ke-1'),
+('K2', 'Kenyamanan', 'Penting ke-2'),
+('K3', 'Ketahanan', 'Cukup Penting ke-3'),
+('K4', 'Perawatan', 'Biasa ke-4');
 
 -- --------------------------------------------------------
 
@@ -82,7 +80,7 @@ INSERT INTO `criteria` (`code`, `name`, `priority`) VALUES
 CREATE TABLE `selections` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `score` double(11,2) NOT NULL
+  `score` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -90,11 +88,12 @@ CREATE TABLE `selections` (
 --
 
 INSERT INTO `selections` (`id`, `user_id`, `score`) VALUES
-(1, 1, 0.21),
-(2, 2, 0.20),
-(3, 3, 0.19),
-(4, 4, 0.18),
-(5, 5, 0.22);
+(24, 1, 0.19667015580367928),
+(25, 2, 0.22729280517518738),
+(26, 3, 0.2175619524387945),
+(27, 4, 0.1950298068085848),
+(28, 5, 0.11007117468177018),
+(29, 6, 0.05337410509198398);
 
 -- --------------------------------------------------------
 
@@ -142,17 +141,7 @@ ALTER TABLE `candidates`
 -- Indexes for table `selections`
 --
 ALTER TABLE `selections`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `user_id` (`user_id`),
-  ADD UNIQUE KEY `score` (`score`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -162,19 +151,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `candidates`
 --
 ALTER TABLE `candidates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `selections`
 --
 ALTER TABLE `selections`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
