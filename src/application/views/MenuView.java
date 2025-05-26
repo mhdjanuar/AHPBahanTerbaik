@@ -310,7 +310,7 @@ public class MenuView extends javax.swing.JFrame {
         logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         logout.setForeground(new java.awt.Color(255, 255, 255));
         logout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        logout.setText("  Log Out");
+        logout.setText("Keluar");
         logout.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         logout.setOpaque(true);
         logout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -355,7 +355,7 @@ public class MenuView extends javax.swing.JFrame {
         judul1.setBackground(new java.awt.Color(245, 247, 250));
         judul1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         judul1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        judul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/loremipsum-resize.png"))); // NOI18N
+        judul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/mangun_jaya-200.png"))); // NOI18N
         judul1.setOpaque(true);
 
         Pane.setBackground(new java.awt.Color(250, 250, 250));
@@ -390,8 +390,8 @@ public class MenuView extends javax.swing.JFrame {
                     .addComponent(judul2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Pane, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
-                    .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)))
+                    .addComponent(Pane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

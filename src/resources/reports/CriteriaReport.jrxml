@@ -78,29 +78,29 @@
 	<pageHeader>
 		<band height="80" splitType="Stretch">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="100" forecolor="#FFFCFC" backcolor="#3F4A2C" uuid="6b28d8c9-a965-418d-a0dd-71b3ab1b7433"/>
+				<reportElement style="Table_TD" mode="Opaque" x="-20" y="-20" width="595" height="100" forecolor="#FFFCFC" backcolor="#3F4A2C" uuid="ceb0c639-d790-4784-8344-4950ef69ff88"/>
 				<staticText>
-					<reportElement x="110" y="10" width="350" height="30" forecolor="#FCFAFA" uuid="38248d53-582e-4b32-b347-292de01b6231"/>
+					<reportElement x="110" y="10" width="350" height="30" forecolor="#FCFAFA" uuid="5a12aa99-6c42-400d-8229-3c2fffe5a011"/>
 					<textElement textAlignment="Center">
 						<font fontName="Times New Roman" size="20" isBold="true"/>
 						<paragraph lineSpacingSize="1.0"/>
 					</textElement>
-					<text><![CDATA[CV.Mangu Jaya]]></text>
+					<text><![CDATA[CV.Mangun Jaya]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="142" y="40" width="310" height="20" forecolor="#FFFAFA" uuid="cc54f1db-86e0-4f33-9bfa-af8fb4039af1"/>
+					<reportElement x="182" y="40" width="310" height="20" forecolor="#FFFAFA" uuid="5bd79f7a-72f1-4733-808c-c0db3d46fe9e"/>
 					<textElement>
 						<font fontName="Times New Roman"/>
 					</textElement>
-					<text><![CDATA[Jl. Raya Bogor Cililitan No.20, RT.1/RW.15, Cililitan, Kec. Kramat jati]]></text>
+					<text><![CDATA[JLN. MABES TNI DELTA 5, Kota Jakarta Timur]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="153" y="60" width="267" height="20" forecolor="#FCFAFA" uuid="7185b925-1f0c-49bd-a713-ef41b9944f8c"/>
-					<text><![CDATA[Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13640]]></text>
+					<reportElement x="200" y="60" width="267" height="20" forecolor="#FCFAFA" uuid="0ad0aacb-2522-4c4b-ab42-774d80e67304"/>
+					<text><![CDATA[Daerah Khusus Ibukota Jakarta 13870]]></text>
 				</staticText>
 				<image>
 					<reportElement x="40" y="25" width="50" height="50" uuid="23d5bb3f-e081-4190-9f1d-1a95495589ee"/>
-                                        <imageExpression><![CDATA[$P{PATH}+"loremipsum-resize.png"]]></imageExpression>
+                                        <imageExpression><![CDATA[$P{PATH}+"mangun_jaya-200.png"]]></imageExpression>
 				</image>
 			</frame>
 		</band>

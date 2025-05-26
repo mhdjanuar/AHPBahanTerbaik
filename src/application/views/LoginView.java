@@ -123,7 +123,7 @@ public class LoginView extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(245, 247, 250));
 
-        logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/loremipsum-resize.png"))); // NOI18N
+        logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/mangun_jaya-200.png"))); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("Aplikasi Sistem Pendukung Keputusan");
@@ -136,29 +136,27 @@ public class LoginView extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(39, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(logo1)
+                            .addComponent(jLabel10))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(logo1)
-                        .addGap(65, 65, 65))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel11)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(jLabel11)
+                        .addGap(82, 82, 82))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(logo1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
+                .addGap(69, 69, 69)
                 .addComponent(jLabel10)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel11)
-                .addGap(18, 18, 18))
+                .addGap(24, 24, 24))
         );
 
         jPanel4.setBackground(new java.awt.Color(102, 124, 66));

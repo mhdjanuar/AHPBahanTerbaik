@@ -114,29 +114,29 @@ on s.user_id = c.id ORDER BY s.score DESC]]>
 	<pageHeader>
 		<band height="80" splitType="Stretch">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="100" forecolor="#FFFCFC" backcolor="#3F4A2C" uuid="df10008d-5a0a-4fe8-9e77-9217f5bd4703"/>
+				<reportElement style="Table_TD" mode="Opaque" x="-20" y="-20" width="595" height="100" forecolor="#FFFCFC" backcolor="#3F4A2C" uuid="ceb0c639-d790-4784-8344-4950ef69ff88"/>
 				<staticText>
-					<reportElement x="110" y="10" width="350" height="30" forecolor="#FCFAFA" uuid="b2ef3a52-9952-44f0-9a51-e2d70dc05736"/>
+					<reportElement x="110" y="10" width="350" height="30" forecolor="#FCFAFA" uuid="5a12aa99-6c42-400d-8229-3c2fffe5a011"/>
 					<textElement textAlignment="Center">
 						<font fontName="Times New Roman" size="20" isBold="true"/>
 						<paragraph lineSpacingSize="1.0"/>
 					</textElement>
-					<text><![CDATA[CV.Mangu Jaya]]></text>
+					<text><![CDATA[CV.Mangun Jaya]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="142" y="40" width="310" height="20" forecolor="#FFFAFA" uuid="2db7fc7b-cc27-442a-b01f-c21c516964a9"/>
+					<reportElement x="182" y="40" width="310" height="20" forecolor="#FFFAFA" uuid="5bd79f7a-72f1-4733-808c-c0db3d46fe9e"/>
 					<textElement>
 						<font fontName="Times New Roman"/>
 					</textElement>
-					<text><![CDATA[Jl. Raya Bogor Cililitan No.20, RT.1/RW.15, Cililitan, Kec. Kramat jati]]></text>
+					<text><![CDATA[JLN. MABES TNI DELTA 5, Kota Jakarta Timur]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="153" y="60" width="267" height="20" forecolor="#FCFAFA" uuid="2d01288e-9bf2-4262-a13a-d974b45ab1d6"/>
-					<text><![CDATA[Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13640]]></text>
+					<reportElement x="200" y="60" width="267" height="20" forecolor="#FCFAFA" uuid="0ad0aacb-2522-4c4b-ab42-774d80e67304"/>
+					<text><![CDATA[Daerah Khusus Ibukota Jakarta 13870]]></text>
 				</staticText>
 				<image>
 					<reportElement x="40" y="25" width="50" height="50" uuid="23d5bb3f-e081-4190-9f1d-1a95495589ee"/>
-                                        <imageExpression><![CDATA[$P{PATH}+"loremipsum-resize.png"]]></imageExpression>
+                                        <imageExpression><![CDATA[$P{PATH}+"mangun_jaya-200.png"]]></imageExpression>
 				</image>
 			</frame>
 		</band>
@@ -148,7 +148,7 @@ on s.user_id = c.id ORDER BY s.score DESC]]>
 				<textElement textAlignment="Center">
 					<font size="20" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Laporan Data Hasil Rangking]]></text>
+				<text><![CDATA[Laporan Data Hasil Ranking]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
@@ -177,7 +177,7 @@ on s.user_id = c.id ORDER BY s.score DESC]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10"/>
 								</textElement>
-								<text><![CDATA[NO RANGKING]]></text>
+								<text><![CDATA[NO RANKING]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">

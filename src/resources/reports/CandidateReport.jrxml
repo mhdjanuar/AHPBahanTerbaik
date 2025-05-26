@@ -124,22 +124,22 @@
 						<font fontName="Times New Roman" size="20" isBold="true"/>
 						<paragraph lineSpacingSize="1.0"/>
 					</textElement>
-					<text><![CDATA[CV.Mangu Jaya]]></text>
+					<text><![CDATA[CV.Mangun Jaya]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="142" y="40" width="310" height="20" forecolor="#FFFAFA" uuid="5bd79f7a-72f1-4733-808c-c0db3d46fe9e"/>
+					<reportElement x="182" y="40" width="310" height="20" forecolor="#FFFAFA" uuid="5bd79f7a-72f1-4733-808c-c0db3d46fe9e"/>
 					<textElement>
 						<font fontName="Times New Roman"/>
 					</textElement>
-					<text><![CDATA[Jl. Raya Bogor Cililitan No.20, RT.1/RW.15, Cililitan, Kec. Kramat jati]]></text>
+					<text><![CDATA[JLN. MABES TNI DELTA 5, Kota Jakarta Timur]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="153" y="60" width="267" height="20" forecolor="#FCFAFA" uuid="0ad0aacb-2522-4c4b-ab42-774d80e67304"/>
-					<text><![CDATA[Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13640]]></text>
+					<reportElement x="200" y="60" width="267" height="20" forecolor="#FCFAFA" uuid="0ad0aacb-2522-4c4b-ab42-774d80e67304"/>
+					<text><![CDATA[Daerah Khusus Ibukota Jakarta 13870]]></text>
 				</staticText>
 				<image>
 					<reportElement x="40" y="25" width="50" height="50" uuid="23d5bb3f-e081-4190-9f1d-1a95495589ee"/>
-                                        <imageExpression><![CDATA[$P{PATH}+"loremipsum-resize.png"]]></imageExpression>
+                                        <imageExpression><![CDATA[$P{PATH}+"mangun_jaya-200.png"]]></imageExpression>
 				</image>
 			</frame>
 		</band>
