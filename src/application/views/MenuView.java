@@ -108,6 +108,7 @@ public class MenuView extends javax.swing.JFrame {
         laporanCalonPelamar = new javax.swing.JLabel();
         laporanPrioritasKriteria = new javax.swing.JLabel();
         laporanHasilSeleksi = new javax.swing.JLabel();
+        laporanHasilSeleksi1 = new javax.swing.JLabel();
         laporan = new javax.swing.JLabel();
         seleksi = new javax.swing.JLabel();
         logout = new javax.swing.JLabel();
@@ -252,13 +253,31 @@ public class MenuView extends javax.swing.JFrame {
             }
         });
 
+        laporanHasilSeleksi1.setBackground(new java.awt.Color(63, 74, 44));
+        laporanHasilSeleksi1.setForeground(new java.awt.Color(255, 255, 255));
+        laporanHasilSeleksi1.setText("    Laporan Data Akun");
+        laporanHasilSeleksi1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        laporanHasilSeleksi1.setOpaque(true);
+        laporanHasilSeleksi1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                laporanHasilSeleksi1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                laporanHasilSeleksi1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                laporanHasilSeleksi1MouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout slideMenuLaporanLayout = new javax.swing.GroupLayout(slideMenuLaporan);
         slideMenuLaporan.setLayout(slideMenuLaporanLayout);
         slideMenuLaporanLayout.setHorizontalGroup(
             slideMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(laporanCalonPelamar, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-            .addComponent(laporanPrioritasKriteria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(laporanPrioritasKriteria, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
             .addComponent(laporanHasilSeleksi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(laporanHasilSeleksi1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(laporanCalonPelamar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         slideMenuLaporanLayout.setVerticalGroup(
             slideMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,7 +286,9 @@ public class MenuView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(laporanPrioritasKriteria, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(laporanHasilSeleksi, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(laporanHasilSeleksi, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(laporanHasilSeleksi1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         laporan.setBackground(new java.awt.Color(102, 124, 66));
@@ -630,6 +651,43 @@ public class MenuView extends javax.swing.JFrame {
         logout.setForeground(Color.white);
     }//GEN-LAST:event_logoutMouseExited
 
+    private void laporanHasilSeleksi1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laporanHasilSeleksi1MouseClicked
+        // TODO add your handling code here:
+         try{
+            String templateName = "LaporanAkunBahanTerbaik.jrxml";
+            InputStream reportStream = MenuView.class.getResourceAsStream("/resources/reports/" + templateName);
+            JasperDesign jd = JRXmlLoader.load(reportStream);
+            
+            Connection dbConnection = DatabaseUtil.getInstance().getConnection();
+            JasperReport jr = JasperCompileManager.compileReport(jd);
+            
+            HashMap parameter = new HashMap();
+            parameter.put("PATH","resources/images/");
+//            Map<String, Object> params = new HashMap<>();
+//            
+//            BufferedImage image = ImageIO.read(getClass().getResource("/resources/templates/cherry.jpg"));
+//            params.put("logo", image );
+
+            JasperPrint jp = JasperFillManager.fillReport(jr,parameter, dbConnection);
+            JasperViewer.viewReport(jp, false);
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }//GEN-LAST:event_laporanHasilSeleksi1MouseClicked
+
+    private void laporanHasilSeleksi1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laporanHasilSeleksi1MouseEntered
+        // TODO add your handling code here:
+        laporanHasilSeleksi1.setBackground(new Color(63, 74, 44));
+        laporanHasilSeleksi1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        laporanHasilSeleksi1.setForeground(new Color(255, 187, 0));
+    }//GEN-LAST:event_laporanHasilSeleksi1MouseEntered
+
+    private void laporanHasilSeleksi1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laporanHasilSeleksi1MouseExited
+        // TODO add your handling code here:
+        laporanHasilSeleksi1.setBackground(new Color(63, 74, 44));
+        laporanHasilSeleksi1.setForeground(Color.white);
+    }//GEN-LAST:event_laporanHasilSeleksi1MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -682,6 +740,7 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JLabel laporan;
     private javax.swing.JLabel laporanCalonPelamar;
     private javax.swing.JLabel laporanHasilSeleksi;
+    private javax.swing.JLabel laporanHasilSeleksi1;
     private javax.swing.JLabel laporanPrioritasKriteria;
     private javax.swing.JLabel logout;
     private javax.swing.JLabel seleksi;

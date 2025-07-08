@@ -244,9 +244,10 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="laporanCalonPelamar" alignment="0" pref="242" max="32767" attributes="0"/>
-                      <Component id="laporanPrioritasKriteria" alignment="0" max="32767" attributes="0"/>
+                      <Component id="laporanPrioritasKriteria" alignment="0" pref="242" max="32767" attributes="0"/>
                       <Component id="laporanHasilSeleksi" alignment="0" max="32767" attributes="0"/>
+                      <Component id="laporanHasilSeleksi1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="laporanCalonPelamar" alignment="1" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -257,6 +258,8 @@
                           <Component id="laporanPrioritasKriteria" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="laporanHasilSeleksi" min="-2" pref="27" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="laporanHasilSeleksi1" min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -320,6 +323,26 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="laporanHasilSeleksiMouseClicked"/>
                     <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="laporanHasilSeleksiMouseEntered"/>
                     <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="laporanHasilSeleksiMouseExited"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="laporanHasilSeleksi1">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="4a" red="3f" type="rgb"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="    Laporan Data Akun"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Default Cursor"/>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="laporanHasilSeleksi1MouseClicked"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="laporanHasilSeleksi1MouseEntered"/>
+                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="laporanHasilSeleksi1MouseExited"/>
                   </Events>
                 </Component>
               </SubComponents>
