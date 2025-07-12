@@ -129,7 +129,7 @@ public class MenuView extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Menggunakan Metode AHP Pada CV.Mangun Jaya");
+        jLabel3.setText("Menggunakan Metode AHP Pada CV.Mangun Jaya Utama");
 
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);

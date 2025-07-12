@@ -214,7 +214,7 @@
 						<font fontName="Times New Roman" size="20" isBold="true"/>
 						<paragraph lineSpacingSize="1.0"/>
 					</textElement>
-					<text><![CDATA[CV.Mangun Jaya]]></text>
+					<text><![CDATA[CV.Mangun Jaya Utama]]></text>
 				</staticText>
 				<staticText>
 					<reportElement x="182" y="40" width="310" height="20" forecolor="#FFFAFA" uuid="5bd79f7a-72f1-4733-808c-c0db3d46fe9e"/>

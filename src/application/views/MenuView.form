@@ -61,7 +61,7 @@
               <Font name="Tahoma" size="24" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Menggunakan Metode AHP Pada CV.Mangun Jaya"/>
+            <Property name="text" type="java.lang.String" value="Menggunakan Metode AHP Pada CV.Mangun Jaya Utama"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">
